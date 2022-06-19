@@ -1,0 +1,10 @@
+N = int(input())
+data = []
+
+for i in range(N):
+    data.append(int(input()))
+data.sort(reverse=True)
+for i in range(len(data)):
+    data[i] = data[i]*(i+1)
+
+print(max(data))
