@@ -29,7 +29,7 @@ public class Main {
 
         int result = 0;
         for (int i = 0; i < N; i++) {
-            System.out.println(A[i] + " " + BB[i]);
+            // System.out.println(A[i] + " " + BB[i]);
             result += A[i] * BB[i];
 
         }
