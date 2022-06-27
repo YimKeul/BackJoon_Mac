@@ -19,8 +19,8 @@ while(max>=min):
         max = mid-1
     else:
         min = mid +1
-        answer = answer if answer > mid else mid
+        # answer = answer if answer > mid else mid
   
 
-
-print(answer)
+print(max)
+# print(answer)
