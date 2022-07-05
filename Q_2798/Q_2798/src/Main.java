@@ -21,7 +21,7 @@ public class Main {
 
     private static int search(int[] data, int n, int m) {
         int result = 0;
-        ArrayList<Integer> list = new ArrayList<>();
+        // ArrayList<Integer> list = new ArrayList<>();
         for (int i = 0; i < n - 2; i++) {
             for (int j = i + 1; j < n - 1; j++) {
                 for (int k = j + 1; k < n; k++) {
@@ -29,16 +29,18 @@ public class Main {
                     if (m == temp) {
                         return temp;
                     }
-
-                    if (temp < m) {
-                        list.add(temp);
+                    if (result < temp && temp < m) {
+                        result = temp;
                     }
+                    // if (temp < m) {
+                    // list.add(temp);
+                    // }
                 }
             }
         }
-        Collections.sort(list);
-        Collections.reverse(list);
-        result = list.get(0);
+        // Collections.sort(list);
+        // Collections.reverse(list);
+        // result = list.get(0);
         return result;
     }
 }
