@@ -25,15 +25,13 @@ for _ in range(M):
     adj_list[b].append((a, c))
 start, end = map(int, sys.stdin.readline().split())
 mx, mn = 1000000000, 1
-ans = 0
 while mn <= mx:
     mid = (mn + mx) // 2
     # mid 무게로 start 섬에서 end 섬으로 갈 수 있을 경우
     # ans 갱신, 최대값을 구하기 위해 mn 증가
     if bfs(mid):
-        ans = mid
         mn = mid + 1
     # 못 갈 경우 mx를 줄이면서 갈 수 있는 무게 구하기
     else:
         mx = mid - 1
-print(ans)
+print(mx)
